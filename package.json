@@ -1,0 +1,24 @@
+{
+    "author": "Alexis Morel <alexis.morel@homeprod.fr>",
+    "devDependencies": {
+        "awesome-typescript-loader": "^3.2.2",
+        "babel-cli": "^6.24.1",
+        "babel-preset-env": "^1.6.0",
+        "tslint": "^5.6.0",
+        "typescript": "^2.4.2",
+        "webpack": "^3.5.3",
+        "webpack-node-externals": "^1.6.0"
+    },
+    "license": "MIT",
+    "main": "src/scrollTo.ts",
+    "name": "hp-scrollto",
+    "repository": "https://reiwilde@github.com/fr-homeprod/hp-scrollto.git",
+    "scripts": {
+        "babel": "node node_modules/babel-cli/bin/babel.js",
+        "tsc": "node node_modules/typescript/bin/tsc",
+        "tslint": "node node_modules/tslint/bin/tslint",
+        "webpack": "node node_modules/webpack/bin/webpack.js",
+        "build": "yarn webpack"
+    },
+    "version": "0.0.1"
+}
