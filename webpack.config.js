@@ -4,7 +4,7 @@ const nodeExternals = require("webpack-node-externals");
 
 module.exports = {
     context: path.resolve(__dirname),
-    devtool: "source-map",
+    devtool: 'source-map',
     entry: path.resolve(__dirname, "src/scrollTo.ts"),
     externals: nodeExternals(),
     module: {
@@ -13,17 +13,19 @@ module.exports = {
             use: [{
                 loader: "awesome-typescript-loader",
                 options: {
-                    useBabel: true,
                     babelOptions: {
                         presets: "env",
                     },
+                    useBabel: true,
                 },
             }]
         }],
     },
     output: {
-        filename: " [name].js",
+        filename: "scrollTo.js",
         path: path.resolve(__dirname, "dist"),
+        library: 'scrollTo',
+        libraryTarget: 'umd',
     },
     resolve: {
         extensions: [
