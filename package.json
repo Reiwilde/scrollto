@@ -4,21 +4,25 @@
         "awesome-typescript-loader": "^3.2.2",
         "babel-cli": "^6.24.1",
         "babel-preset-env": "^1.6.0",
+        "dts-bundle": "^0.7.3",
         "tslint": "^5.6.0",
         "typescript": "^2.4.2",
         "webpack": "^3.5.3",
         "webpack-node-externals": "^1.6.0"
     },
     "license": "MIT",
-    "main": "src/scrollTo.ts",
+    "main": "dist/scrollTo.js",
     "name": "hp-scrollto",
     "repository": "https://reiwilde@github.com/fr-homeprod/hp-scrollto.git",
     "scripts": {
         "babel": "node node_modules/babel-cli/bin/babel.js",
+        "dts-bundles": "node node_modules/dts-bundle/lib/dts-bundle.js",
         "tsc": "node node_modules/typescript/bin/tsc",
         "tslint": "node node_modules/tslint/bin/tslint",
         "webpack": "node node_modules/webpack/bin/webpack.js",
-        "build": "yarn webpack"
+        "build": "yarn webpack && yarn dts-bundles -- --name hp-scrollto --main dist/scrollTo.d.ts",
+        "install": "yarn build"
     },
+    "types": "dist/hp-scrollto.d.ts",
     "version": "0.0.1"
 }
