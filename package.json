@@ -20,8 +20,8 @@
         "tsc": "node node_modules/typescript/bin/tsc",
         "tslint": "node node_modules/tslint/bin/tslint",
         "webpack": "node node_modules/webpack/bin/webpack.js",
-        "build": "yarn webpack && yarn dts-bundles -- --name hp-scrollto --main dist/scrollTo.d.ts",
-        "install": "yarn build"
+        "build": "yarn webpack && yarn dts-bundles -- --name hp-scrollto --main dist/scrollTo.d.ts && rm dist/scrollTo.d.ts",
+        "prepublish": "yarn build"
     },
     "types": "dist/hp-scrollto.d.ts",
     "version": "0.0.1"
